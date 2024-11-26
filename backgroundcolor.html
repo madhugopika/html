@@ -1,0 +1,115 @@
+<html>
+
+<head>
+  
+ <title>Change Background Color</title>
+ 
+ <style>
+ 
+   .color-box 
+{
+     
+ width: 300px;
+      
+height: 200px;
+    
+  margin: 20px auto;
+  
+    text-align: center;
+     
+ line-height: 200px;
+     
+ font-size: 20px;
+     
+ border: 2px solid #ccc;
+   
+   transition: background-color 0.5s ease;
+  
+  }
+
+    
+button 
+
+{
+  
+    padding: 10px 20px;
+   
+   margin: 10px;
+    
+  font-size: 16px;
+    
+  cursor: pointer
+{
+      
+background-color: #4CAF50;
+   
+   co
+ #rese
+  background-color: #45a049;
+
+    }
+ 
+ </style>
+
+</head>
+
+<body>
+
+ 
+ <h2>Interactive Background Color Changer</h2>
+
+  
+<div class="color-box" id="colorBox">Hover or Click Me</div>
+
+ 
+ <button id="resetBtn">Reset Color</button>
+
+ 
+ <script>
+    // Get the color box element
+  
+  const colorBox = document.getElementById("colorBox");
+  
+  const resetBtn = document.getElementById("resetBtn");
+
+
+    // Event listener for hover (mouseover and mouseout)
+   
+ colorBox.addEventListener("mouseover", function() 
+
+{
+      colorBox.style.backgroundColor = "#FFCC00";  
+    });
+
+ 
+   colorBox.addEventListener("mouseout", function()
+ {
+      colorBox.style.backgroundColor = ""; 
+// Reset to default color when hover ends
+    });
+
+  
+  // Event listener for click
+ 
+   colorBox.addEventListener("click", function()
+ {
+      colorBox.style.backgroundColor = "#3498db";  
+    colorBox.textContent = "Clicked!"; // Change text when clicked
+    });
+
+
+    // Reset button event to reset the background color
+  
+  resetBtn.addEventListener("click", function() 
+{
+   
+   colorBox.style.backgroundColor = "#f0f0f0";
+ // Default background color
+    
+  colorBox.textContent = "Hover or Click Me"; // Reset text
+  
+  });
+  </script>
+
+</body>
+</html>
